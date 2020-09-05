@@ -17,7 +17,7 @@ public class Login extends javax.swing.JFrame {
 
     public void logar() {
 
-	String sql = "select * from TB_login where login =? and senha_acesso = ?";
+	String sql = "select * from TB_login where login =? and senha = ?";
 	try {
 	    // as linhas abaixo preparam a consulta ao banco em função do 
 	    // que foi digitado em usuário e senha. O ? é substituido pelo conteudo das variáveis
@@ -111,9 +111,9 @@ public class Login extends javax.swing.JFrame {
 
         lblStatus.setText("status");
 
-        jLabel1.setText("Usuário Admin: adilson  senha:12345");
+        jLabel1.setText("Usuário Admin: adilson  senha: 1");
 
-        jLabel2.setText("Usuário comum: juca   senha:54321");
+        jLabel2.setText("Usuário comum: juca   senha: 1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -150,19 +150,19 @@ public class Login extends javax.swing.JFrame {
                     .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(47, 47, 47)
                 .addComponent(lblStatus)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(btnLogin)
-                        .addGap(46, 46, 46))
+                        .addGap(34, 34, 34))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2)
-                        .addGap(12, 12, 12))))
+                        .addComponent(jLabel2)))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
-        setSize(new java.awt.Dimension(524, 268));
+        setSize(new java.awt.Dimension(524, 286));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

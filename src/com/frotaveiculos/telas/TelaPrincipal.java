@@ -11,10 +11,10 @@ import javax.swing.JOptionPane;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import net.sf.jasperreports.engine.JRResultSetDataSource;
-import net.sf.jasperreports.engine.JasperFillManager;
-import net.sf.jasperreports.engine.JasperPrint;
-import net.sf.jasperreports.view.JasperViewer;
+//import net.sf.jasperreports.engine.JRResultSetDataSource;
+//import net.sf.jasperreports.engine.JasperFillManager;
+//import net.sf.jasperreports.engine.JasperPrint;
+//import net.sf.jasperreports.view.JasperViewer;
 
 /**
  *
@@ -380,8 +380,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_MenuItemCadastrarMotoristaActionPerformed
 
     private void MenuItemCadastrarSetorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemCadastrarSetorActionPerformed
-	GTelaCadastroSetor frameGTelaCadastroSetor = new GTelaCadastroSetor();
-	frameGTelaCadastroSetor.setVisible(true);
+	/*GTelaCadastroSetor frameGTelaCadastroSetor = new GTelaCadastroSetor();
+	frameGTelaCadastroSetor.setVisible(true);*/
     }//GEN-LAST:event_MenuItemCadastrarSetorActionPerformed
 
     private void MenuItemCadastrarVeiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemCadastrarVeiculoActionPerformed
@@ -423,10 +423,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
 	    
 	    try {
 		//Usando a Classe JasperPrint que esta dentro das bibliotecas para preparar a impressão.
-		JasperPrint RelatorioAbastecimento = JasperFillManager.fillReport("C:\\Users\\Adilson\\iReports\\RelatorioAbastecimento.jasper",null,conexao);
+//		JasperPrint RelatorioAbastecimento = JasperFillManager.fillReport("C:\\Users\\Adilson\\iReports\\RelatorioAbastecimento.jasper",null,conexao);
 
 		//A linha a baixo exibe o relatório através da classe jasperViewer.
-		JasperViewer.viewReport(RelatorioAbastecimento,false);
+//		JasperViewer.viewReport(RelatorioAbastecimento,false);
 	    } catch (Exception e) {
 		JOptionPane.showMessageDialog(null,"Erro ao chamar o relatório!\nErro: "+ e);
 	    }
@@ -444,10 +444,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
 	    
 	    try {
 		//Usando a Classe JasperPrint que esta dentro das bibliotecas para preparar a impressão.
-		JasperPrint RelatorioDeslocamento = JasperFillManager.fillReport("C:\\Users\\Adilson\\iReports\\RelatorioDeslocamento.jasper",null,conexao);
+//		JasperPrint RelatorioDeslocamento = JasperFillManager.fillReport("C:\\Users\\Adilson\\iReports\\RelatorioDeslocamento.jasper",null,conexao);
 
 		//A linha a baixo exibe o relatório através da classe jasperViewer.
-		JasperViewer.viewReport(RelatorioDeslocamento,false);
+//		JasperViewer.viewReport(RelatorioDeslocamento,false);
 	    } catch (Exception e) {
 		JOptionPane.showMessageDialog(null,"Erro ao chamar o relatório!\nErro: "+ e);
 	    }

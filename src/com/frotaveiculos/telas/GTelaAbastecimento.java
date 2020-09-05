@@ -5,13 +5,7 @@
  */
 package com.frotaveiculos.telas;
 
-import com.frotaveiculos.entidade.TelaAbastecimento;
 import javax.swing.JOptionPane;
-import net.sf.ehcache.hibernate.HibernateUtil;
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 
 /**
  *
@@ -23,8 +17,8 @@ public class GTelaAbastecimento extends javax.swing.JFrame {
      * Creates new form GTelaAbastecimento
      */
     public GTelaAbastecimento() {
-	initComponents();
-	setBounds(300, 50, 700, 650);
+        initComponents();
+        setBounds(300, 50, 700, 650);
     }
 
     /**
@@ -335,21 +329,6 @@ public class GTelaAbastecimento extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonAbastecimentoSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAbastecimentoSalvarActionPerformed
-	Session sessao = null;
-
-	try {
-	    //sessao = HibernateUtil.getSessionFactory.openSession();
-	    Transaction t = sessao.beginTransaction();
-	    TelaAbastecimento c = new TelaAbastecimento();
-	    c.setNome(jTextFieldAbastecimentoReciboNumero.getText());
-	    sessao.save(c);
-	    t.commit();
-	    JOptionPane.showMessageDialog(null, "Efetuado com sucesso");
-	} catch (HibernateException he) {
-	    he.printStackTrace();
-	} finally {
-	    sessao.close();
-	}
 
     }//GEN-LAST:event_jButtonAbastecimentoSalvarActionPerformed
 
@@ -357,35 +336,35 @@ public class GTelaAbastecimento extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-	/* Set the Nimbus look and feel */
-	//<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-	/* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-	 */
-	try {
-	    for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-		if ("Nimbus".equals(info.getName())) {
-		    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-		    break;
-		}
-	    }
-	} catch (ClassNotFoundException ex) {
-	    java.util.logging.Logger.getLogger(GTelaAbastecimento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-	} catch (InstantiationException ex) {
-	    java.util.logging.Logger.getLogger(GTelaAbastecimento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-	} catch (IllegalAccessException ex) {
-	    java.util.logging.Logger.getLogger(GTelaAbastecimento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-	} catch (javax.swing.UnsupportedLookAndFeelException ex) {
-	    java.util.logging.Logger.getLogger(GTelaAbastecimento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-	}
-	//</editor-fold>
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(GTelaAbastecimento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(GTelaAbastecimento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(GTelaAbastecimento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(GTelaAbastecimento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
 
-	/* Create and display the form */
-	java.awt.EventQueue.invokeLater(new Runnable() {
-	    public void run() {
-		new GTelaAbastecimento().setVisible(true);
-	    }
-	});
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new GTelaAbastecimento().setVisible(true);
+            }
+        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
